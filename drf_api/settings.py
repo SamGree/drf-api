@@ -38,6 +38,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io'
+]
+
 
 # Application definition
 
