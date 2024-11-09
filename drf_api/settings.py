@@ -34,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#8%b$3h%u=z23a(ubtt4g8j9j(68k)-s6uata*$3*t-tro$84l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io']
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'rest_framework',
     'profiles',
 ]
 
