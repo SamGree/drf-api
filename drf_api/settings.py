@@ -76,7 +76,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io',
-                'drf-api-sam..herokuapp.com'
+                'drf-api-sam-c8393f26fa4b.herokuapp.com'
                 ]
 
 CSRF_TRUSTED_ORIGINS = [
