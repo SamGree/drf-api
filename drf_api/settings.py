@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import re
+
 from pathlib import Path
 import os
+import re
 import dj_database_url
 
 if os.path.exists('env.py'):
@@ -76,10 +77,13 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io',
                 os.environ.get('ALLOWED_HOST'),
+                'localhost',
+                '127.0.0.1',
                 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io'
+    'https://8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io',
+    'https://drf-api-sam-c8393f26fa4b.herokuapp.com',
 ]
 
 
