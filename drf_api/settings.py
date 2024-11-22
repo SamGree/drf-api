@@ -55,6 +55,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),  # Allow host from environment variable
     'localhost',                     # Allow local development
     'drf-api-sam-c8393f26fa4b.herokuapp.com',  # <-- Add your Heroku domain here
+    '8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io'
 ]
 
 # CORS settings
@@ -62,14 +63,10 @@ if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
     ]
-
 # Configure CORS for dynamic subdomains in CLIENT_ORIGIN_DEV
-if 'CLIENT_ORIGIN_DEV' in os.environ:
-    extracted_url = re.match(
-        r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE
-    ).group(0)
+if "CLIENT_ORIGIN_DIV" in os.environ:
     CORS_ALLOWED_ORIGIN_REGEXES = [
-        rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
+        r"^https://.*\.codeinstitute-ide\.net$",
     ]
 
 CORS_ALLOW_CREDENTIALS = True
