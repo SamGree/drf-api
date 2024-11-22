@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import re
 import dj_database_url
+from corsheaders.defaults import default_headers, default_methods
 
 # Load environment variables from env.py if it exists
 if os.path.exists('env.py'):
