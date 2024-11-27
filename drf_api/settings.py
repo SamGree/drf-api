@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-import re
+# import re
 import dj_database_url
 from corsheaders.defaults import default_headers, default_methods
 
@@ -50,7 +50,7 @@ REST_AUTH_SERIALIZERS = {
 
 # Security settings
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = 'DEV' in os.environ
+DEBUG = 'DEBUG' in os.environ
 
 # Allowed hosts configuration
 ALLOWED_HOSTS = [
