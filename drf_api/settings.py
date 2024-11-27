@@ -47,6 +47,7 @@ REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
 }
 
+
 # Security settings
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
@@ -72,7 +73,13 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_HEADERS = list(default_headers)
 CORS_ALLOW_METHODS = list(default_methods)
-CSRF_TRUSTED_ORIGINS = [os.environ.get('CLIENT_ORIGIN_DEV', 'CLIENT_ORIGIN')]
+# CSRF_TRUSTED_ORIGINS = [os.environ.get('CLIENT_ORIGIN_DEV', 'CLIENT_ORIGIN')]
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-samgree-drfapi-ro0lht4dv2x.ws-eu116.gitpod.io',  # Gitpod URL
+    'https://drf-api-sam-c8393f26fa4b.herokuapp.com',  # Heroku URL
+]
+
+
 
 # Application definition
 INSTALLED_APPS = [
